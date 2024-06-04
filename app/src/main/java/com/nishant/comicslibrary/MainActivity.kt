@@ -19,6 +19,7 @@ import com.nishant.comicslibrary.ui.theme.ComicsLibraryTheme
 import com.nishant.comicslibrary.view.CharacterBottomNav
 import com.nishant.comicslibrary.view.CollectionScreen
 import com.nishant.comicslibrary.view.LibraryScreen
+import dagger.hilt.android.AndroidEntryPoint
 
 sealed class Destination(
     val route: String
@@ -30,6 +31,7 @@ sealed class Destination(
     }
 }
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
